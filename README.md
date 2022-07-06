@@ -1,2 +1,2 @@
-# flutter-curso
+# Estudos - Flutter
 Repositório para estudo - Primeiro projeto com flutter
