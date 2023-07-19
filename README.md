@@ -2,9 +2,6 @@
 
 A new Flutter project.
 
-## Comands
-- Create the project: flutter create name --platforms platforms path
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
