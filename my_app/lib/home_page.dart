@@ -1,31 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/home_controller.dart';
-
-// class HomePage extends StatelessWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     var controller = HomeController.of(context);
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Nav bar'),
-//       ),
-//       body: Center(
-//         child: Text(
-//           'Numero: ${controller.value}',
-//           style: const TextStyle(fontSize: 35),
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         child: const Icon(Icons.add),
-//         onPressed: () {
-//           controller.increment();
-//         },
-//       ),
-//     );
-//   }
-// }
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,23 +13,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Nav bar'),
-      ),
-      body: Center(
-        child: Text(
-          'Numero: ${counter}',
-          style: const TextStyle(fontSize: 35),
+        appBar: AppBar(
+          title: const Text('Nav bar'),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
-      ),
-    );
+        body: Center(
+          child: SingleChildScrollView(
+              child: Column(
+            children: [
+              for (var i = 0; i < 10; i++)
+                Container(
+                  width: double.infinity,
+                  height: 80,
+                  margin: const EdgeInsets.all(5),
+                  color: Colors.blue,
+                )
+            ],
+          )),
+        ));
   }
 }
